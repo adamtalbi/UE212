@@ -1,0 +1,44 @@
+Introduction
+Pour comprendre l'importance croissante du xml dans le web d'aujourd'hui il faut entre autre s’intéresser aux entreprises adeptes du SOA( service-oriented Architecture), EAI (Entreprise Application Intégration) et Edi(Echange de donnée informatisé). Elles ouvrent de plus en plus leurs infrastructures aux échanges entre partenaire sur internet ce qui par ricochet transforme les échanges de flux en vecteur qui apporte le virus au coeur du système. Pour s'adapter aux services web un pare-feu xml est nécessaire. Nous allons nous intéresser au fonctionnement de cet outil, à son utilité, sa mise en place, ses avantages et ses défauts. Ensuite nous parlerons des normes de sécurité associées au xml et nous vous ferons découvrir d'autres système de sécurité basé sur XML
+
+I/ Mise en situation
+
+A-Web service
+
+(définition des webservices, utilité et application)
+
+B- Firewall XML ( parefeu xml)
+
+II- Principe de fonctionnement
+
+A- Principe de fonctionnement des webservice
+
+B- Principe de fonctionnement des firewall XML
+
+
+II/Contrôle de l'information
+
+Voici les étapes de la protection des informations :
+Router les messages, chiffrer déchiffrer, signer et vérifier les signatures, valider les messages, authentifier et autoriser, protéger, transformer
+
+Le pare feu XML est chargé de verifier tout les flux XML entrant et sortant, en validant leurs structure SOAP, il sert aussi à se proteger des virus entrant dans les documents SOAP.Les pare feu les plus évoluées peuvent détecter les problèmes de permissions et surveillé les flux d'informations confidentielles.
+
+III/ Normes de sécurités
+
+Voici un schéma de fonctionnement d'un parefeu XML.
+Le pare-feu XML instaure une approche gagnant-gagnant pour les entreprises qui utilisent ce genre de services web. Les administrateurs capitalisent sur des listes de contrôle d’accès, des autorisations basées sur le profil et une sécurité au niveau de la couche des messages pour créer une stratégie de sécurité à base de règles, souple et capable de s’adapter à des besoins en constante mutation.
+De leur côté, les développeurs logiciels se voient ainsi libérés de la contrainte de spécifier dans leur code les éléments complexes déclaratifs ou impératifs de sécurité.
+
+
+Conclusion
+
+Bénéfices
+• Sécurité
+Protection contre les attaques connues et inconnues
+• Conformité
+Respect des réglementations
+• Utilisation
+Utilisation et mise en oeuvre simples
+
+La sécurisation des services web est un thème relativement récent. Si les standards de sécurité des messages XML sont conséquents, on doit quand même constater que l’emploi de ceux-ci se limite souvent à l’établissement d’un tunnel chiffré permettant de protéger l'information, voire à la vérification du format des messages.
+Dans le cadre fermé d’un dialogue de machine à machine, la sécurisation des flux n’est pas perçue comme une tâche très importante.
