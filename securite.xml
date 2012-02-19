@@ -18,7 +18,6 @@
     Découverte, pour permettre de rechercher et de localiser un service web particulier dans un annuaire de services décrivant le nom de la société, l'objectif de chaque service, etc.
     Description, dont l'objectif est la description des interfaces (paramètres des fonctions, types de données) des services web.
     Les standards de base utilisés par les Web-Services (SOAP, WSDL) sont normalisés par le W3C (http://www.w3.org/2002/ws/), tandis que l'OASIS est chargée de la standardisation des couches supérieures, plus proches du niveau applicatif (sécurité, etc.).
-        
     </A>
     <B name="Sécurisation des services Web">
     Les Web Services ne supportent pas explicitement les mécanismes de sécurité. Aﬁn de sécuriser les Web Services il faudrait commencer par sécuriser l’infrastructure informatique puis sécuriser spécifiquement les Web Services : Pour cela on peut rendre sûres les connexions et les données en utilisant les standards existants. Un pare-feu XML, première brique de cette ligne de défense, se différencie d’un pare-feu traditionnel, ce dernier se révélant être inefficace pour éradiquer les menaces sur les services web.  Un pare-feu XML se déploie en aval du pare-feu traditionnel pour parer à ces vulnérabilités. 
@@ -43,19 +42,34 @@
       <1 name="XML Signatures">
       XML Signature permet d’intégrer directement dans le document XML la signature et le certificat L’avantage pour les Web Services est que les éléments nécessaires à la sécurité sont inclus dans le document XML. XML Signature est totalement adapté aux Web Services et intègre :
       <list>
-        <item>Une protection du document par cryptage</item>
-        <item>Authentification de l’entité qui a envoyé le document</item>
-        <item>l’intégrité du document</item>
+        <item>1. Une protection du document par cryptage</item>
+        <item>2. Authentification de l’entité qui a envoyé le document</item>
+        <item>3. l’intégrité du document</item>
       </list>
       Les principaux avantages de la signature XML sont que des parties de documents ou des documents entiers peuvent être protégés et les documents sont protégés même en dehors du transfert
       des documents. Cependant ce standard ne couvre pas tous les éléments de sécurités comme par exemple la gestion
       des droits d’accès.
       </1>
       <2 name="XKMS XML Key Management Spécification">
-      
+      La spécification XKMS offre une infrastructure de gestion es clés publiques aﬁn de généraliser
+      l’utilisation de XML Signature.
+      Pour faciliter l’emploi et le développement de XML Signature, il faut fournir des entités de confiance qui supportent la gestion de clés publiques, et plus seulement se limiter à l’utilisation de certificats qui est très contraignante. Dans cette approche, on identifie un service Web de
+      confiance qui offre une implémentation d’un service XKMS permettant :
+      <list>
+        <item>– d’enregistrer une paire de clés et d’obtenir en contrepartie un certificat.</item>
+        <item>– de rechercher une clé publique.</item>
+        <item>– de supprimer une paire de clés.</item>
+      </list>
+      Autrement dit, l’entité qui fournit l’implantation XKMS joue le rôle d’une autorité de certification
       </2>
       <3 name="SAML Security Assertion Markup Language">
-      
+      Le standard SAML a pour but de favoriser l’interopérabilité entre les solutions de gestion des
+      droits utilisateurs sur Internet.
+      SAML définit des formats de messages XML et un vocabulaire pour véhiculer des informations qui composent une procédure d' authentification. Il est composé de deux schémas XML suivants :
+      <list>
+        <item>– Déclaration de nom : Il s’agit d’un document XML signé contenant une proposition de trois éléments : le type d’authentiﬁcation, la source d’authentiﬁction et le sujet authentifié.</item>
+        <item>– Habilitation : Il s’agit d’un document XML signé décrivant les renseignements relatifs aux autorisations d’un sujet identité. L’habilitation suit l’utilisateur d’un domaine à l’autre pendant tout le cours d’une transaction</item>
+      </list>
       </3>
       <4 name="WS-Security">
       Cette spéciﬁcation qui a été proposée à l’origine dans le but de décrire l’ensemble des pratiques de sécurité les plus couramment utilisées. Objectif à terme : élaborer une interface qui assure l’interopérabilité entre solutions de sécurité d’entreprise, reposant sur des technologies hétérogènes.
