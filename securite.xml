@@ -79,6 +79,24 @@
     </A>
   </II>
   <conclusion>
-    
+  La gestion du contrôle d’accès, un des éléments fondamentaux des systèmes de
+bases de données, est traditionnellement effectuée sur les serveurs, à qui les
+utilisateurs accordent leur confiance. Cependant, cette situation évolue rapidement à
+cause de plusieurs facteurs : la méfiance vis à vis des hébergeurs de données ou
+Database Service Providers concernant la préservation de la confidentialité
+des données, la vulnérabilité croissante des serveurs de bases de
+données face aux attaques externes et internes, l’émergence de moyens
+décentralisés pour partager les données grâce aux bases de données pair à pair
+et aux systèmes de distribution basé sur des licences, et
+l’inquiétude croissante des parents et des enseignants vis à vis des contenus digitaux
+téléchargés sur Internet par des mineurs
+  
+    Plusieurs facteurs importants motivent aujourd’hui la délégation du contrôle
+d’accès aux terminaux clients. En compilant les politiques de contrôle d’accès dans
+le schéma de chiffrement, les solutions existantes de gestion du contrôle d’accès sur
+le client minimisent la confiance requise sur le client au prix d’un partage statique
+des données. Notre objectif est de tirer profit de nouveaux éléments de confiance
+présents sur les terminaux clients pour proposer une gestion du contrôle d’accès
+capable d’évaluer des règles d’accès dynamiques sur un document XML chiffré.
   </conclusion>
 </plan>
