@@ -2,13 +2,34 @@
 <?xml-stylesheet type="text/css" href="securite.css"?>
 
 <plan>
+  <introdution>
+  
+  </introduction>
   <I name="Mise en situation">
-  
+    <A name="Principe de fonctionnement des web-service">
+    
+    </A>
+    <B name="Sécurisation des services Web">
+    
+    </B>
   </I>
-  <II>
-  
+  <II name="Sécurité de l'information">
+    <A name="Standard XML de sécurité">
+      <1 name="XML Signatures">
+      
+      </1>
+      <2 name="XKMS XML Key Management Spécification">
+      
+      </2>
+      <3 name="SAML Security Assertion Markup Language">
+      
+      </3>
+      <4 name="WS-Security">
+      
+      </4>
+    </A>
   </II>
-  <III>
-  
-  </III>
+  <conclusion>
+    
+  </conclusion>
 </plan>
