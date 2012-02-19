@@ -1,0 +1,72 @@
+Introduction
+Pour comprendre l'importance croissante du xml dans le web d'aujourd'hui il faut entre autre s’intéresser aux entreprises adeptes du SOA( service-oriented Architecture), EAI (Entreprise Application Intégration) et Edi(Echange de donnée informatisé). Elles ouvrent de plus en plus leurs infrastructures aux échanges entre partenaire sur internet ce qui par ricochet transforme les échanges de flux en vecteur qui apporte le virus au cœur du système. Pour s'adapter aux services web un pare-feu xml est nécessaire. Nous allons nous intéresser au fonctionnement de cet outil, à son utilité, sa mise en place, ses avantages et ses défauts. Ensuite nous parlerons des normes de sécurité associées au xml et nous vous ferons découvrir d'autres système de sécurité basé sur XML
+I/ Mise en situation
+Les web services sont au cœur des échanges  de données en entreprise. Compte tenue des nombreux aspects liés à la sécurité , à l'authentification et aux autorisations, à la confidentialité et à l'intégrité des données  et compte tenu du  fait  que la spécification SOAP (simple object access protocol)  ne mentionne pas la sécurité , il est facile d'imaginer les risques auxquelles s'exposent les différents protagonistes de l'échange sur internet s'ils ne se dotent pas d'un outil capable de les mettre à l’abri des virus et intrusions informatique. Nous ne pouvons approfondir notre sujet sans  savoir réellement ce qui est un web services ou services web.
+A-Web service
+Avec l'avènement d'internet  il devient tout a fait possible  de faire fonctionner des applications  sur des machines distantes. Ce principe peut paraître inutile puisque les applications fonctionnent très bien  en local, mais lorsque l'on s’intéresse de près au phénomène les avantages  deviennent évidents :
+les données peuvent être présentes uniquement sur le serveur distant (par exemple un catalogue produit, un classement en temps réel etc..) ;
+le serveur distant peut disposer d'une puissance de calcul ou de capacités de stockage dont l'utilisateur local ne dispose pas ;
+L'application distante peut être utilisée simultanément par un grand nombre d'internautes et sa mise à jour n'intervient qu'à un seul endroit.
+Tout ces avantages font la force des services web et les rend incontournables dans les milieux professionnels.
+Définition
+Les services web (en anglais web services) représentent un mécanisme de communication entre applications distantes à travers le réseau internet indépendant de tout langage de programmation et de toute plate-forme d'exécution :
+utilisant le protocole HTTP comme moyen de transport. Ainsi, les communications s'effectuent sur un support universel, maîtrisé et généralement non filtré par les  Pare-feux
+employant une syntaxe basée sur la notation XML  pour décrire les appels de fonctions distantes et les données échangées ;
+organisant les mécanismes d'appel et de réponse.
+Grâce aux services web, les applications peuvent être vues comme un ensemble de services métiers, structurés et correctement décrits, dialoguant selon un standard international plutôt qu'un ensemble d'objets et de méthodes entremêlés.
+Le premier bénéfice de ce découpage est la facilité de maintenance de l'application, ainsi que l'interopérabilité permettant de modifier facilement un composant (un service) pour le remplacer par un autre, éventuellement développé par un tiers. Qui plus est, les services web permettent de réduire la complexité d'une application car le développeur peut se focaliser sur un service, indépendamment du reste de l'application.
+Les services web facilitent non seulement les échanges entre les applications de l'entreprise mais surtout permettent une ouverture vers les autres entreprises. Les premiers fournisseurs de services web sont ainsi les fournisseurs de services en ligne (météo, bourse, planification d'itinéraire, pages jaunes, etc.), mettant à disposition des développeurs des API (Application Programmable Interface) payantes ou non, permettant d'intégrer leur service au sein d'applications tierces.
+B- Firewall XML ( pare-feu xml)
+Des outils existent pour sécuriser un système d'entreprise à tous les étages mais quand il s'agit d'une application web les chosent ne sont plus du tout les mêmes. En effet les  pare-feu  traditionnels sont conçus pour filtrer le trafic en entrée et en sortie d'un réseau d'entreprise. Cependant lorsque des paquets de données transitent par le  biais du protocole HTTP, ces produits qui exploitent le port  80 n'opèrent généralement aucune surveillance . Quand il s'agit du transfert de pages web  une ouverture du port 80 sans conditions particulières  de protection peut sans doute suffire mais a l'inverse l'utilisation des applications dérogent à cette loi car régie par la couche HTTP. Il faut faire appel à d'autres types de pare-feu, il s'agit en occurrence ici d'un pare-feu XML.
+Définition:
+Un pare-feu XML est un dispositif spécialisé utilisé pour protéger les applications exposées à travers les interfaces basées sur XML. Généralement déployé dans un environnement DMZ un pare-feu XML est souvent utilisé pour valider le trafic , filtrer le contenu .Les pare-feu XML sont couramment déployé en tant que matériel, mais peuvent également être trouvés en tant que logiciel et application  virtuelle pour VMWare, Xen ou  Amazon EC2. Un certain nombre de marques de pare-feu XML existent et elles diffèrent souvent en fonction de paramètres tels que la performance (avec ou sans accélération matérielle, 32 Vs 64 bits), l'évolutivité , la certification de sécurité (critères communs, FIPS est plus courante) support de l'identité, (SAML,SSO)et l'extensibilité . Les  fonctionnalités des pare-feu XML sont généralement intégré à l'intérieur d'applications  XML et des passerelles SOA .
+II- Principe de fonctionnement
+Nous allons ici aborder les principes de fonctionnement des applications web  et ensuite des pare- feu XML. Les deux notions vont de paire et ne peuvent pas être traité séparément.
+
+A- Principe de fonctionnement des web-service
+Le fonctionnement des services web repose sur un modèle en couches, dont les trois couches fondamentales sont les suivantes :
+Invocation, visant à décrire la structure des messages échangés par les applications.
+Découverte, pour permettre de rechercher et de localiser un service web particulier dans un annuaire de services décrivant le nom de la société, l'objectif de chaque service, etc.
+Description, dont l'objectif est la description des interfaces (paramètres des fonctions, types de données) des services web.
+Les standards de base utilisés par les Web-Services (SOAP, WSDL) sont normalisés par le W3C (http://www.w3.org/2002/ws/), tandis que l'OASIS est chargée de la standardisation des couches supérieures, plus proches du niveau applicatif (sécurité, etc.).
+Invocation
+Il existe deux grands standards de services web, tous deux basés sur XML:
+XRPC(XML Remote Procedure Call) , le plus ancien, fonctionnant sur un principe proc&eaacute;dural et sans gestion des états.
+ SOAP(le Object Access Protocol), fonctionnant selon le modèle objet
+Quel que soit le standard utilisé, le principe de programmation est le même: l'appel de méthode distante est réalisé grâce à une bibliothèque cliente qui transmet la demande au fournisseur de service en la formatant en XML de manière transparente; au niveau du serveur une bibliothèque serveur décode la requête, le serveur fait ses traitement, puis répond grâce à cette même bibliothèque; la bibliothèque client décode enfin la réponse afin qu'elle puisse être utilisée par l'application client.
+Découverte
+Le protocole standard le plus utilisé pour la découverte de services est UDDI
+Description
+Le protocole standard le plus utilisé pour la description de services est WSDL
+
+B- Principe de fonctionnement des firewall XML
+
+
+
+II/Contrôle de l'information
+
+Voici les étapes de la protection des informations : 
+Router les messages, chiffrer déchiffrer, signer et vérifier les signatures, valider les messages, authentifier et autoriser, protéger, transformer
+Le pare feu XML est chargé de verifier tout les flux XML entrant et sortant, en validant leurs structure SOAP, il sert aussi à se proteger des virus entrant dans les documents SOAP.Les pare feu les plus évoluées peuvent détecter les problèmes de permissions et surveillé les flux d'informations confidentielles.
+III/ Normes de sécurités
+
+Voici un schéma de fonctionnement d'un parefeu XML.
+Le pare-feu XML instaure une approche gagnant-gagnant pour les entreprises qui utilisent ce genre de services web. Les administrateurs capitalisent sur des listes de contrôle d’accès, des autorisations basées sur le profil et une sécurité au niveau de la couche des messages pour créer une stratégie de sécurité à base de règles, souple et capable de s’adapter à des besoins en constante mutation.
+De leur côté, les développeurs logiciels se voient ainsi libérés de la contrainte de spécifier dans leur code les éléments complexes déclaratifs ou impératifs de sécurité.
+
+Conclusion
+
+Bénéfices
+• Sécurité
+Protection contre les attaques connues et inconnues
+• Conformité
+Respect des réglementations
+• Utilisation
+Utilisation et mise en œuvre simples
+
+La sécurisation des services web est un thème relativement récent. Si les standards de sécurité des messages XML sont conséquents, on doit quand même constater que l’emploi de ceux-ci se limite souvent à l’établissement d’un tunnel chiffré permettant de protéger l'information, voire à la vérification du format des messages.
+Dans le cadre fermé d’un dialogue de machine à machine, la sécurisation des flux n’est pas perçue comme une tâche très importante.
+
+Glossaires des liens :
+UDDI.
+WSDL. 
