@@ -7,7 +7,7 @@
   <head>
     <title>Securité, pare-feu XML</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="proprietes_CSS.css" />
+    <link rel="stylesheet" type="text/css" href="securite.css" />
   </head>
   <body>
 
