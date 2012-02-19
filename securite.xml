@@ -3,7 +3,7 @@
 
 <plan>
   <introdution>
-  
+  Pour comprendre l'importance croissante du xml dans le web d'aujourd'hui il faut entre autre s’intéresser aux entreprises adeptes du SOA( service-oriented Architecture), EAI (Entreprise Application Intégration) et Edi(Echange de donnée informatisé). Elles ouvrent de plus en plus leurs infrastructures aux échanges entre partenaire sur internet ce qui par ricochet transforme les échanges de flux en vecteurs qui apportent le virus au cœur du système. Pour s'adapter aux services web un pare-feu xml est nécessaire. Nous allons nous intéresser au fonctionnement de cet outil, à son utilité, sa mise en place, ses avantages et ses défauts. Ensuite nous parlerons des normes de sécurité associées au xml et nous vous ferons découvrir d'autres système de sécurité basé sur XML.
   </introduction>
   <I name="Mise en situation">
     <A name="Principe de fonctionnement des web-service">
